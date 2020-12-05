@@ -257,7 +257,7 @@ nav h1{
     align-items: center;
     justify-content: center;
     text-align: center;
-    display: inline-block;
+    display: flex;
     margin-bottom:10px ;
     overflow: hidden;
     
