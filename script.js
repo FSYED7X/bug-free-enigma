@@ -1,79 +1,78 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
-const email = document.getElementsByTagName('email');
+const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-form.addEventListener('submit',(event) =>{
-    
+form.addEventListener('submit', (event) => {
     event.preventDefault();
     checkInputs();
 });
 
-function checkInputs(){
+function checkInputs() {
     const usernameValue = username.value;
     const emailValue = email.value;
     const passwordValue = password.value;
     const password2Value = password2.value;
 
-    if(usernameValue ===""){
-       
-        setErrorfor(username,"Username cannot be blank");
+    if (usernameValue === "") {
+        console.log("ASdasd")
+        setErrorfor(username, "Username cannot be blank");
     }
-    else{
+    else {
         //add success
+        
         setSuccessfor(username);
     }
-
-   if(emailValue ===''){
-   
-    setErrorfor(email,"email cannot be blank");
+    
+    if (emailValue === '') {
+        
+        setErrorfor(email, "email cannot be blank");
     }
-   
-    else{
+    
+    else {
+        console.log("aa")
         //add success
         setSuccessfor(email);
     }
-    if(passwordValue ===''){
-        
-        setErrorfor(password,"password cannot be blank");
+
+    if (passwordValue === '') {
+
+        setErrorfor(password, "password cannot be blank");
     }
-    else{
+    else {
         //add success
         setSuccessfor(password);
     }
-    if (password2Value ===''){
-        
-        setErrorfor(password2," confirm password");
+    if (password2Value === '') {
+
+        setErrorfor(password2, " confirm password");
     }
-    else if(passwordValue ==password2Value)
-    {
-        setErrorfor(password2 ,"password does not match");
+    else if (passwordValue == password2Value) {
+        setErrorfor(password2, "password does not match");
     }
-    else{
+    else {
         //add success
         setSuccessfor(password2);
     }
 
-    //success
 
 }
 
-function setErrorfor(input,message)
-{
+function setErrorfor(input, message) {
     const formitem = input.parentNode;
-    // console.log(input.parentNode,formitem)
-    const small= formitem.querySelector('small');
+    console.log(input.parentNode,formitem)
+    const small = formitem.querySelector('small');
 
-    
+
     small.innerHTML = message;
 
-    formitem.className = "form-item success";
+    formitem.className = "form-item error";
 }
 
-function setSuccessfor(input) 
-{ 
-    const formitem = input.parentNode;
+function setSuccessfor(i) {
+    console.log(i)
+    const formitem = i.parentNode;
     console.log(formitem)
-    formitem.className = "form-item error";
+    formitem.className = "form-item success";
 }
