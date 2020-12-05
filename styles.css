@@ -107,11 +107,11 @@ nav h1{
     text-align: "center";
     display: grid;
     grid-template-rows: 400px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40% ;
     
 }
 .partition1{
-    width:120%;
+    width:100%;
     padding: 40px;
     
 }
@@ -171,6 +171,9 @@ nav h1{
     background-position: center;
     background-size: cover;
     margin-bottom: 10px ;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .key-points .keys{
