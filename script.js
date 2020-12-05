@@ -48,7 +48,7 @@ function checkInputs() {
 
         setErrorfor(password2, " confirm password");
     }
-    else if (passwordValue == password2Value) {
+    else if (passwordValue != password2Value) {
         setErrorfor(password2, "password does not match");
     }
     else {
